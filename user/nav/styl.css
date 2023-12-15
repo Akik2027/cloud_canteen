@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+:root{
+    --red:#f33737;
+}
+*{
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+
+}
+*::selection{
+    background: var(--red);
+    color: #fff;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+body{
+    background: #f7f7f7;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(37, 37, 37);
+    opacity: 0.9;
+    padding: 2rem 9%;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+ .logo{
+        margin: -10px -15px;
+}
+ .logo img{
+     height: 89px;
+    margin: 1px 2px;
+    
+}
+.logo2{
+    margin-right:auto;
+}
+.text {
+    padding-right: .5rem;
+    color: var(--red);
+    font-size: 2rem;
+    font-weight: bolder;
+    height: 60px;
+    
+    
+}
+.text2 {
+    padding-right: .5rem;
+    color: rgb(233, 233, 233);
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+header .navbar a{
+    font-size: 2.1rem;
+    margin-left: 2rem;
+    color: #eceaea;
+}
+header .navbar a:hover{
+    color: var(--red);
+}
+#menu-bar{
+    font-size: 3rem;
+    cursor: pointer;
+    color: #e2e2e2;
+    border: .1rem solid #e2e2e2;
+    border-radius: .3rem;
+    padding: .5rem 1.5rem;
+    display: none;
+}
+
+/*media queries */
+@media(max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    header{
+        padding: 2rem;
+    }
+}
+@media(max-width:768px){
+   #menu-bar{
+    display: initial;
+   }
+
+   header .navbar{
+    position: absolute;
+    top: 100%;
+    left: 0; right: 0;
+    background:#f7f7f7 ;
+    border-top: .1rem solid rgba(0,0,0,.1);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+   }
+
+   header .navbar.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100% ,0% 100%);
+   }
+
+   header .navbar a{
+    margin: 1.5rem;
+    padding: 1.5rem;
+    display: block;
+    border: .2rem solid rgba(0,0,0,.1);
+    border-left: .5rem solid var(--red);
+    background: #333333;
+   }
+}
+
+@media(max-width:400px){
+
+    html{
+        font-size: 50%;
+    }
+}
